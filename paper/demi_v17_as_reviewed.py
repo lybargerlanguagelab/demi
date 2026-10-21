@@ -1,12 +1,14 @@
-# DEMI v17: the algorithm code as submitted to the Journal of Biomedical
-# Informatics in the supplementary Appendix of Alemi et al. (2026),
-# doi:10.1016/j.jbi.2026.105111. Kept verbatim as the code of record for the
-# results reported in the article; only this header comment was added. For new
-# work use demi_v17.py in the repository root. See paper/REPRODUCIBILITY.md.
+# DEMI v17: the algorithm code that accompanied the manuscript of Alemi et al.
+# (2026), doi:10.1016/j.jbi.2026.105111, through peer review as part of its
+# supplementary Appendix. The code was removed from the supplement before
+# publication so that it is distributed only here, under the license in this
+# repository; the published Appendix contains the assumptions and proof only.
+# Kept unchanged as the code of record for the results reported in the article;
+# only this header comment was added. For new work use demi_v17.py in the
+# repository root. See paper/REPRODUCIBILITY.md.
 #
 # Copyright (c) 2026 George Mason University. Licensed under the George Mason
 # University Noncommercial Use License; see LICENSE and NOTICE.
-
 
 import warnings
 from typing import Any, Dict, List, Optional, Set, Tuple, Union

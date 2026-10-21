@@ -6,29 +6,29 @@ This repository is the code companion to:
 
 > Alemi F, Lin Y, Elyazori H, Franzuela Cardenas V, Ramezani N, Lybarger K. Direct Effects Multiplicative Inference (DEMI): causal prediction from pairwise clinical relationships, applied to antidepressant response. *Journal of Biomedical Informatics*. 2026;105111. https://doi.org/10.1016/j.jbi.2026.105111
 
-A preprint is on SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6537875
-
 ## What is here
 
 | Path | What it is |
 |---|---|
 | `demi_v17.py` | The DEMI algorithm as a Python library (NumPy and pandas): the odds-ratio rules of Table 2, the backward recursion for direct effects, EPV-balanced predictor selection, the calibration correction factor, and `run_demi`, which returns a `predict_proba` function. Includes helpers for reading an authorized SQLite knowledgebase, which is not distributed. |
 | `examples/synthetic_example.py` | The paper's synthetic example (Section 3.2) run end to end on an in-memory pairwise table. Needs no database. Prints every intermediate value next to the published one. **Run this first.** |
-| `examples/worked_example.ipynb` | The paper's sertraline example (anxiety, major depressive disorder, citalopram non-response) with saved outputs that reproduce the published values. Rerunning it requires authorized access to the study knowledgebase. |
-| `paper/appendix_code_v17.py` | The algorithm code exactly as submitted to the journal in the supplementary Appendix: the code of record for the article's results. Kept for provenance; use `demi_v17.py` for new work. |
+| `examples/worked_example.ipynb` | The paper's sertraline example (anxiety, major depressive disorder, citalopram non-response) with saved outputs that reproduce the published values. Rerunning it requires authorized access to the study knowledgebase. Its last section reports a known difference in feature ordering between the library's global temporal scores and the article's Equation 8; see `paper/REPRODUCIBILITY.md`. |
+| `paper/demi_v17_as_reviewed.py` | The algorithm code that accompanied the manuscript through peer review (it was part of the supplementary Appendix and was removed before publication so that it is distributed only here, under this license). The code of record for the article's results, kept unchanged for provenance; use `demi_v17.py` for new work. |
 | `paper/REPRODUCIBILITY.md` | What the article reports, which file produced it, what cannot be rerun from this repository, and the known differences between the two code files. |
-| `LICENSE`, `NOTICE`, `CITATION.cff` | License terms, attribution, and citation metadata. |
+| `LICENSE`, `NOTICE`, `CITATION.cff`, `requirements.txt` | License terms, attribution, citation metadata, and Python dependencies. |
 
 ## What is not here
 
-- **The knowledgebase.** The pairwise relationship tables were derived from the NIH All of Us Research Program under its data use agreement and are not distributed. The All of Us data themselves are available only to approved researchers through the Researcher Workbench. Derived tables may be shared on reasonable request if the data use agreement permits; contact the corresponding author.
+- **The knowledgebase.** The pairwise relationship tables were derived from the NIH All of Us Research Program under its data use agreement and are not distributed with this release. The All of Us data themselves are available only to approved researchers through the Researcher Workbench. We are preparing a reduced version of the knowledgebase that can be shared under All of Us dissemination rules (aggregate counts only, no count below 20) and will post it here, or a pointer to it, when it is cleared. Until then, derived tables may be shared on reasonable request where the data use agreement permits; contact the corresponding author. (Status as of October 2026.)
 - **The Table 3 experiment harness.** The case-control sampling, SAFE/EPV feature selection, split-sample evaluation, AUC computation, and logistic regression comparison ran inside the All of Us Researcher Workbench and are not available outside it. See `paper/REPRODUCIBILITY.md`.
 - **SNOMED CT release files.** The library's hierarchy helpers read a SNOMED CT relationship file that you must obtain under your own SNOMED CT license.
 
 ## Checking your installation
 
+Requires Python 3.9 or later with NumPy and pandas (`requirements.txt`). Tested with Python 3.10 (NumPy 2.2, pandas 2.3) and Python 3.13 (NumPy 2.5, pandas 3.0).
+
 ```
-pip install numpy pandas
+pip install -r requirements.txt
 python examples/synthetic_example.py
 ```
 
@@ -46,7 +46,28 @@ result = demi.run_demi(edges, force_outcome=outcome_id, db_path=None,
 probability = result["predict_proba"]({feature_id: 1, ...})
 ```
 
-Each row of `edges` describes one ordered pair (target concept, predictor concept) with the four 2 x 2 counts (`n_code_target`, `n_code_no_target`, `n_target_no_code`, `n_no_code_no_target`), the marginals, the two precedence counts, and `total_effects_log` for predictor-outcome rows. With `db_path` set to an authorized knowledgebase, `run_demi` also reads published temporal scores and the concept hierarchy from the database; `examples/worked_example.ipynb` shows that mode.
+### Input format
+
+Each row of `edges` describes one ordered pair of concepts, a target and a predictor ("code"), with counts of unique patients:
+
+| Column | Meaning |
+|---|---|
+| `target_concept_code_int`, `concept_code_int` | integer IDs of the target and the predictor |
+| `n_code_target` | predictor present and target present (a) |
+| `n_code_no_target` | predictor present, target absent (b) |
+| `n_target_no_code` | predictor absent, target present (c) |
+| `n_no_code_no_target` | neither present (d) |
+| `n_code`, `n_target`, `n_no_target` | marginals: predictor present; target present; target absent |
+| `n_code_before_target`, `n_target_before_code` | precedence counts among patients with both: predictor first; target first |
+| `total_effects`, `total_effects_log` | adjusted odds ratio (Table 2 rules) and its natural log, required on rows whose target is the outcome; `compute_or_v17_scalar(a, b, c, d)` computes it |
+
+Rows whose target is the outcome supply total effects and prevalences. Rows whose target is a downstream feature supply the mediation weight P(downstream = 1 | predictor = 1) and the precedence counts for temporal ordering. `examples/synthetic_example.py` builds a complete table by hand.
+
+With `db_path` set to an authorized knowledgebase, `run_demi` also reads published temporal scores and the concept hierarchy from the database; `examples/worked_example.ipynb` shows that mode.
+
+## Versions
+
+The code in this repository is DEMI v17, the version evaluated in the article. The release tagged `v17-jbi-2026` is the version that corresponds to the published article; later commits may change the library, and the tag is the one to cite for reproducing the paper.
 
 ## License
 
@@ -64,4 +85,4 @@ Patient-Centered Outcomes Research Institute (PCORI), award ME-2024C1-36732. The
 
 ## Contact
 
-Yili Lin (corresponding author), ylin26@gmu.edu
+Questions about the code or the article: Yili Lin (corresponding author), ylin26@gmu.edu, or open an issue in this repository.
