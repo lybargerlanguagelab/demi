@@ -1,0 +1,22 @@
+DEMI: Direct Effects Multiplicative Inference
+Copyright (c) 2026 George Mason University. All rights reserved except as
+granted in LICENSE.
+
+Creators of the Licensed Material (per the article's CRediT statement):
+  Method: Farrokh Alemi
+  Software: Yili Lin, Hadeel Elyazori, Vladimir Franzuela Cardenas
+
+Please cite:
+  Alemi F, Lin Y, Elyazori H, Franzuela Cardenas V, Ramezani N, Lybarger K.
+  Direct Effects Multiplicative Inference (DEMI): causal prediction from
+  pairwise clinical relationships, applied to antidepressant response.
+  J Biomed Inform. 2026;105111. https://doi.org/10.1016/j.jbi.2026.105111
+
+This software is licensed under the George Mason University Noncommercial Use
+License (see LICENSE). Patent and trademark rights are not licensed. The DEMI
+method is the subject of U.S. Patent Application No. 19/253,342 (US
+2026/0066114 A1), assignee George Mason University. Commercial licensing:
+George Mason University Office of Technology Transfer, ott@gmu.edu.
+
+The software is provided as-is without warranty of any kind; see LICENSE
+Section 5.

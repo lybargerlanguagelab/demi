@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the article below."
+title: "DEMI: Direct Effects Multiplicative Inference"
+type: software
+version: "17"
+date-released: "2026-10-24"
+repository-code: "https://github.com/lybargerlanguagelab/demi"
+license-url: "https://github.com/lybargerlanguagelab/demi/blob/main/LICENSE"
+authors:
+  - family-names: Alemi
+    given-names: Farrokh
+  - family-names: Lin
+    given-names: Yili
+  - family-names: Elyazori
+    given-names: Hadeel
+  - family-names: Franzuela Cardenas
+    given-names: Vladimir
+  - family-names: Ramezani
+    given-names: Niloofar
+  - family-names: Lybarger
+    given-names: Kevin
+preferred-citation:
+  type: article
+  title: "Direct Effects Multiplicative Inference (DEMI): causal prediction from pairwise clinical relationships, applied to antidepressant response"
+  journal: "Journal of Biomedical Informatics"
+  year: 2026
+  doi: "10.1016/j.jbi.2026.105111"
+  authors:
+    - family-names: Alemi
+      given-names: Farrokh
+    - family-names: Lin
+      given-names: Yili
+    - family-names: Elyazori
+      given-names: Hadeel
+    - family-names: Franzuela Cardenas
+      given-names: Vladimir
+    - family-names: Ramezani
+      given-names: Niloofar
+    - family-names: Lybarger
+      given-names: Kevin

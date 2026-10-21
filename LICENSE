@@ -1,0 +1,165 @@
+LICENSE SCOPE
+
+The George Mason University Noncommercial Use License reproduced below applies to
+the software in this repository: demi_v17.py, paper/appendix_code_v17.py,
+examples/synthetic_example.py, and the code cells of
+examples/worked_example.ipynb.
+
+The Licensed Material does not include All of Us Research Program participant
+data, derived pairwise relationship tables, database contents, SNOMED CT release
+files, model or analysis outputs, or notebook outputs. No rights to those
+materials are granted by this license; their access and use remain subject to
+the applicable data use agreements and licenses. Third-party software retains
+its own license.
+
+Copyright (c) 2026 George Mason University. See NOTICE for attribution.
+
+------------------------------------------------------------------------------
+
+George Mason University
+
+Noncommercial Use License
+
+George Mason University (Licensor) owns all rights in and to Licensed Material, and (1) has the exclusive right to license to others the right to produce, copy, make, sublicense or sell the Licensed Material; and (2) retains all rights to the Licensed Material not transferred herein.
+
+By exercising the Licensed Rights (defined below), the Licensee accepts and agrees to be bound by the terms and conditions of this License. The Licensee is granted the Licensed Rights in consideration of the Licensee’s acceptance of these terms and conditions, and the Licensor grants the Licensee such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.
+
+Section 1 – Adapted Material
+
+a.  Adapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor.
+
+b.  Adapter's License means the license the Licensee applies to the Licensee’s Copyright and Similar Rights in the Licensee’s contributions to Adapted Material in accordance with the terms and conditions of this License.
+
+c.  Copyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For the purposes of this License, the rights specified in Section 2 are not Copyright and Similar Rights.
+
+d.  Exceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to the Licensee’s use of the Licensed Material.
+
+e.  Licensed Material means any work for which there is an indication that the work is licensed under this License, including the text of, or a URI or hyperlink to, this License.
+
+f.  Licensed Rights means the rights granted to the Licensee subject to the terms and conditions of this License, which are limited to all Copyright and Similar Rights that apply to the Licensee’s use of the Licensed Material and that the Licensor has authority to license.
+
+g.  Licensor means George Mason University.
+
+h.  Licensee means the individual(s) or entity(ies) exercising the Licensed Rights under this License.
+
+i.  Noncommercial means not intended for or directed towards commercial advantage or monetary compensation. For purposes of this License, the exchange of the Licensed Material for other material subject to Copyright and Similar Rights by digital file-sharing or similar means is noncommercial provided there is no payment of monetary compensation in connection with the exchange.
+
+j.  Share means to provide material to the public or any third party not bound by this license by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public or any third party not bound by this license including in ways that members of the public or any third party not bound by this license may access the material from a place and at a time individually chosen by the third party.
+
+  Section 2 – Scope
+
+a.  Grant.
+
+    1.  Subject to the terms and conditions of this License, the Licensor hereby grants the Licensee a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:
+
+        i.  reproduce and Share the Licensed Material, in whole or in part, for Noncommercial purposes only; and
+
+        ii. produce, reproduce, and Share Adapted Material for Noncommercial purposes only.
+
+    2.  Exceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to the Licensee’s use, this License does not apply, and the Licensee does not need to comply with its terms and conditions.
+
+    3.  Term. The term of this License is specified in Section 6(a).
+
+    4.  Downstream recipients.
+
+        i.  Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this License.
+
+        ii. No downstream restrictions. The Licensee may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.
+
+    5.  No endorsement. Nothing in this License constitutes or may be construed as permission to assert or imply that the Licensee is, or that the Licensee’s use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(i)(A).
+
+b.  Patent and trademark rights are not licensed under this License.
+
+Section 3 – License Conditions.
+
+  The Licensee’s exercise of the Licensed Rights is expressly made subject to the following conditions.
+
+a.  Attribution.
+
+    1.  If the Licensee Shares the Licensed Material (including in modified form), the Licensee must:
+
+        i.  retain the following if it is supplied by the Licensor with the Licensed Material:
+
+            A.  identification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);
+
+            B.  a copyright notice;
+
+            C.  a notice that refers to this License;
+
+            D.  a notice that refers to the disclaimer of warranties;
+
+            E.  a URI or hyperlink to the Licensed Material to the extent reasonably practicable.
+
+        ii. indicate if the Licensee modified the Licensed Material and retain an indication of any previous modifications; and
+
+        iii. indicate the Licensed Material is licensed under this License, and include the text of, or the URI or hyperlink to, this License.
+
+    2.  The Licensee may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which the Licensee Shares the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.
+
+    3.  If requested by the Licensor, the Licensee must remove any of the information required by Section 3(a)(1)(i) to the extent reasonably practicable.
+
+b.  Share.
+
+  In addition to the conditions in Section 3(a), if the Licensee Shares Adapted Material the Licensee produced, the following conditions also apply.
+
+  1. The Adapter’s License the Licensee applies must be commensurate in scope with this License.
+
+  2. The Licensee must include the text of, or the URI or hyperlink to, the Adapter's License the Licensee applies. The Licensee may satisfy this condition in any reasonable manner based on the medium, means, and context in which the Licensee Shares Adapted Material.
+
+  3. The Licensee may not offer or impose any additional or different terms or conditions on Adapted Material that restrict exercise of the rights granted under the Adapter's License the Licensee applies.
+
+Section 5 – Disclaimer of Warranties and Limitation of Liability.
+
+  a. Unless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to the Licensee.
+
+  b. To the extent possible, in no event will the Licensor be liable to the Licensee on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to the Licensee.
+
+  c. The disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.
+
+Section 6 – Term and Termination.
+
+  a. This License applies for the term of the Copyright and Similar Rights licensed here. However, if the Licensee fails to comply with this License, then the Licensee’s rights under this License terminate automatically.
+
+  b. Where the Licensee’s right to use the Licensed Material have terminated under Section 6(a), it reinstates:
+
+  1. automatically as of the date the violation is cured, provided it is cured within 30 days of the Licensee’s discoveries of the violation and a previous violation has not occurred; or
+
+  2. upon express reinstatement by the Licensor.
+
+  For the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for the Licensee’s violations of this License.
+
+  c. For the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this License.
+
+  d. Sections 1, 5, 6, 7, and 8 survive termination of this License.
+
+Section 7 – Other Terms and Conditions.
+
+  a. The Licensor shall not be bound by any additional or different terms or conditions communicated by the Licensee unless expressly agreed.
+
+  b. Any arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this License.
+
+Section 8 – Interpretation.
+
+  a. For the avoidance of doubt, this License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this License.
+
+  b. To the extent possible, if any provision of this License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this License without affecting the enforceability of the remaining terms and conditions.
+
+  c. No term or condition of this License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.
+
+  d. Nothing in this License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or the Licensee, including from the legal processes of any jurisdiction or authority.
+
+Section 9 – Contact Information.
+
+  Licensor may be contacted at:
+
+  George Mason University
+
+  Office of Technology Transfer
+
+  4400 University Drive, MSN: 5G5
+
+  Fairfax VA, 22030
+
+  email: ott@gmu.edu
+
+  phone: (703) 993-8933
