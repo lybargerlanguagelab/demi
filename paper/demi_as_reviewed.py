@@ -4,9 +4,9 @@
 # publication so that it is distributed only here, under the license in this
 # repository; the published Appendix contains the assumptions and proof only.
 # Kept unchanged as the code of record for the results reported in the article;
-# only this header comment was added. For new work use demi.py in the
-# repository root (tag v17 is the version matching the article). See
-# paper/REPRODUCIBILITY.md.
+# only this header comment was added. paper/demi_v17.py is the same algorithm
+# as a library; demi.py in the repository root is the current, later version.
+# See paper/REPRODUCIBILITY.md.
 #
 # Copyright (c) 2026 George Mason University. Licensed under the George Mason
 # University Noncommercial Use License; see LICENSE and NOTICE.

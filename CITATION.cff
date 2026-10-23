@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "If you use this software, please cite the article below."
 title: "DEMI: Direct Effects Multiplicative Inference"
 type: software
-version: "17"
-date-released: "2026-10-21"
+version: "23"
+date-released: "2026-10-23"
 repository-code: "https://github.com/lybargerlanguagelab/demi"
 license-url: "https://github.com/lybargerlanguagelab/demi/blob/main/LICENSE"
 authors:
