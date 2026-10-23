@@ -30,7 +30,7 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-import demi_v17 as demi  # noqa: E402
+import demi  # noqa: E402
 
 Y, Z1, Z2 = 0, 1, 2
 NAMES = {Y: "Y", Z1: "Z1", Z2: "Z2"}

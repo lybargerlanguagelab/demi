@@ -1,4 +1,4 @@
-"""DEMI v17: Direct Effects Multiplicative Inference.
+"""DEMI: Direct Effects Multiplicative Inference (algorithm version 17).
 
 Requires NumPy and pandas. Set DEMI_DB_PATH to an authorized SQLite database
 (not distributed). Pass db_path=None to run on an in-memory pairwise table, as in
@@ -7,7 +7,7 @@ Input rows contain target_concept_code_int, concept_code_int, pairwise counts,
 and precalculated total_effects_log. Database and derived data are not included.
 
 Usage:
-    import DEMI_v17 as demi
+    import demi
     edges = demi.fetch_demi_subgraph_by_ints(db_path, event_ids)
     result = demi.run_demi(edges, force_outcome=outcome_id, db_path=db_path)
     probability = result["predict_proba"]({predictor_id: 1})

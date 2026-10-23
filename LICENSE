@@ -1,7 +1,7 @@
 LICENSE SCOPE
 
 The George Mason University Noncommercial Use License reproduced below applies to
-the software in this repository: demi_v17.py, paper/demi_v17_as_reviewed.py,
+the software in this repository: demi.py, paper/demi_as_reviewed.py,
 examples/synthetic_example.py, and the code cells of
 examples/worked_example.ipynb.
 

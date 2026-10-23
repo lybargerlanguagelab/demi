@@ -10,10 +10,10 @@ This repository is the code companion to:
 
 | Path | What it is |
 |---|---|
-| `demi_v17.py` | The DEMI algorithm as a Python library (NumPy and pandas): the odds-ratio rules of Table 2, the backward recursion for direct effects, EPV-balanced predictor selection, the calibration correction factor, and `run_demi`, which returns a `predict_proba` function. Includes helpers for reading an authorized SQLite knowledgebase, which is not distributed. |
+| `demi.py` | The DEMI algorithm as a Python library (NumPy and pandas): the odds-ratio rules of Table 2, the backward recursion for direct effects, EPV-balanced predictor selection, the calibration correction factor, and `run_demi`, which returns a `predict_proba` function. Includes helpers for reading an authorized SQLite knowledgebase, which is not distributed. |
 | `examples/synthetic_example.py` | The paper's synthetic example (Section 3.2) run end to end on an in-memory pairwise table. Needs no database. Prints every intermediate value next to the published one. **Run this first.** |
 | `examples/worked_example.ipynb` | The paper's sertraline example (anxiety, major depressive disorder, citalopram non-response) with saved outputs that reproduce the published values. Rerunning it requires authorized access to the study knowledgebase. Its last section reports a known difference in feature ordering between the library's global temporal scores and the article's Equation 8; see `paper/REPRODUCIBILITY.md`. |
-| `paper/demi_v17_as_reviewed.py` | The algorithm code that accompanied the manuscript through peer review (it was part of the supplementary Appendix and was removed before publication so that it is distributed only here, under this license). The code of record for the article's results, kept unchanged for provenance; use `demi_v17.py` for new work. |
+| `paper/demi_as_reviewed.py` | The algorithm code that accompanied the manuscript through peer review (it was part of the supplementary Appendix and was removed before publication so that it is distributed only here, under this license). The code of record for the article's results, kept unchanged for provenance; use `demi.py` for new work. |
 | `paper/REPRODUCIBILITY.md` | What the article reports, which file produced it, what cannot be rerun from this repository, and the known differences between the two code files. |
 | `LICENSE`, `NOTICE`, `CITATION.cff`, `requirements.txt` | License terms, attribution, citation metadata, and Python dependencies. |
 
@@ -38,7 +38,7 @@ The script builds the 1,000-patient synthetic knowledgebase from the paper and c
 
 ```python
 import pandas as pd
-import demi_v17 as demi
+import demi
 
 edges = pd.DataFrame(...)   # pairwise rows: see examples/synthetic_example.py for the columns
 result = demi.run_demi(edges, force_outcome=outcome_id, db_path=None,
@@ -67,7 +67,7 @@ With `db_path` set to an authorized knowledgebase, `run_demi` also reads publish
 
 ## Versions
 
-The code in this repository is DEMI v17, the version evaluated in the article. The release tagged `v17-jbi-2026` is the version that corresponds to the published article; later commits may change the library, and the tag is the one to cite for reproducing the paper.
+Versions are marked with git tags, listed in `CHANGELOG.md`. The tag `v17` is the algorithm version evaluated in the article and is the one to cite for reproducing the paper; later tags may change the library. Internal version numbers (v17, v23, ...) follow the lab's development history.
 
 ## License
 
